@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <!-- <link rel="stylesheet" href="href://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <script src="script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body ng-app="myApp" ng-controller = "myCtrl">
+
+    <!-- <a href="#">{{btnName}}</a> -->
+
+     <div class = box>
+        <!-- <img src="" alt="user.jpg" class = "avatar"> -->
+        <form name = "signupform" novalidate autocomplete="off">
+            <h1 ng-show="showlogin">Login</h1>
+            <h1  ng-show="showsignup">Sign up</h1>
+            <div class="textfield">
+                <i class="fa fa-user icon"></i>
+                <input type="text" class="textfield-input" name="username" ng-model="username" required>
+                <label for="">Username</label>
+                <div class="indicator"></div>
+                <div class="">
+                    <span ng-show="signupform.$submitted || signupform.username.$dirty">
+                        <span class="error" ng-show="signupform.username.$error.required"> <i class="fa fa-exclamation-circle"></i> Username required</span>
+                    </span> <br>
+                </div>
+            </div>
+            <div class="textfield">
+                <i class="fa fa-key icon"></i>
+                <input type="text" class="textfield-input" name="password" ng-model="password" required>
+                <label for="">Password</label>
+                <div class="indicator"></div>
+                <div class="">
+                    <span ng-show="signupform.$submitted || signupform.password.$dirty">
+                        <span class="error" ng-show="signupform.password.$error.required"> <i class="fa fa-exclamation-circle"></i> Password required</span>
+                    </span> <br>
+                </div>
+            </div>
+            <div class="textfield" ng-show="showsignup">
+                <i class="fa fa-check icon"></i>
+                <input type="text" class="textfield-input" name="cpassword" ng-model="cpassword" required>
+                <label for="">Confirm password</label>
+                <div class="indicator"></div>
+                <div class="">
+                    <span ng-show="signupform.cpassword.$dirty && !(signupform.cpassword.$error.required)">
+                        <span class="error" ng-show="password != cpassword"> <i class="fa fa-exclamation-circle"></i>Your password must match</span>
+                    </span> 
+                    <span ng-show="signupform.$submitted || signupform.cpassword.$dirty">
+                        <span class="error" ng-show="signupform.cpassword.$error.required"> <i class="fa fa-exclamation-circle"></i> Confirm your password required</span>
+                    </span> 
+                </div>
+            </div><br>
+            <div class="logindiv">
+                <button type="submit" name="submit" class="loginbtn" ng-click="login()">
+                    <span class="lspan"></span>
+                    <span class="lspan"></span>
+                    <span class="lspan"></span>
+                    <span class="lspan"></span>
+                {{btnName}} </button>
+                <p class="account" ng-show="showsignup">Already have an Account? <span> <a ng-click="loginpage()"> Login</a></span></p>
+                <p class="account" ng-show="showlogin">New User? <span> <a ng-click="signuppage()"> Create an account</a></span></p>
+
+            </div>
+        </form>
+     </div>
+</body>
+</html>

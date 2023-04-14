@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/formstyle.css">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="header">
+        <a href="index.html">
+            <h3 class="logo">BELARUSKALI</h3>
+        </a>
+        <ul class="menu">
+            <li class="menu-item">
+                <a href="#about">О компании</a>
+            </li>       
+            <li class="menu-item">
+                <a href="#priority">Кадровая политика</a>
+                
+            </li>
+            <li class="menu-item">
+                <a href="#advantages">Преимущества</a>
+            </li>
+            <li class="menu-item">
+                <a href="#jobs">Вакансии</a>
+            </li>
+            <li class="menu-item">
+                <a href="#contact">Контакты</a>
+            </li>
+        </ul>
+        <a class="logoout-line" href="#">
+            <span class="logoout-line-image" ></span>
+            <span class="logoout-line-text">Личный кабинет</span> </a>
+    </div>
+    <div  id="main" class="main">
+        <h1> <span class="h-color">Главная</span> / Анкета</h1>
+        <form onsubmit="document.location='experienceform.html'; return false">
+            <div class="content-input">
+                <div class="link-form">
+                    <div class="step">
+                       <div class="step-contain">
+                        <a href="formPers.html" class="d-inline-block">
+                            <span class="done">
+                                <img src="img/icons/Vector.svg" alt="done">
+                            </span>
+                        </a>
+                        <p>
+                            Личная информация
+                        </p>
+                       </div>
+                        <div class="line"></div>
+                    </div>
+                    <div class="step choose">
+                        <div class="step-contain">
+                            <span>
+                                <img src="img/form-icon/clarity_user-line1.svg" alt="shool">
+                            </span>
+                            <p>Образование</p>
+                        </div>
+                        <div class="line"></div>
+                    </div>
+                    <div class="step">
+                        <div class="step-contain">
+                            <span>
+                                <img src="img/form-icon/clarity_user-line1.svg" alt="shool">
+                            </span>
+                        </div>
+                        <p>Опыт работы</p>
+                        <div class="line"></div>
+                    </div>
+                    <div class="step">
+                        <div class="step-contain">
+                            <span>
+                                <img src="img/form-icon/clarity_user-line1.svg" alt="shool">
+                            </span>
+                        </div>
+                        <p>Дополнительная информация</p>
+                    </div>
+                    
+                </div>
+                <div class="content-input-form" id="content-input-form">
+                    <div class="fio-info">
+                        <div class="surname input">
+                            <label for="surname">Год окончания</label>
+                            <select name="select" id="yearsEnd"> </select>
+                        </div>
+                        <div class="name input">
+                            <label for="name">Тип образования*</label>
+                            <select name="select" id="typeEd"> 
+                                <option value="общее среднее образование">общее среднее образование</option>
+                                <option value="внешкольное обучение и воспитание">внешкольное обучение и воспитание</option>
+                                <option value="профессионально-техническое образование">профессионально-техническое образование</option>
+                                <option value="среднее специальное образование">среднее специальное образование</option>
+                                <option value="высшее образование">высшее образование</option>
+                                <option value="подготовку научных и научно-педагогических кадров">подготовку научных и научно-педагогических кадров</option>
+                                <option value="повышение квалификации и переподготовку кадров">повышение квалификации и переподготовку кадров</option>
+                                <option value="самостоятельное образование граждан">самостоятельное образование граждан</option>
+                            </select>
+                        </div>
+                        <div class="otchestvo input">
+                            <label for="otchestvo">Форма обучения</label>
+                            <select name="select" id="Edform"> 
+                                <option value="вечерняя">вечерняя</option>
+                                <option value="дневная">дневная</option>
+                                <option value="заочная">заочная</option>
+                                <option value="сокращенная">сокращенная</option>
+                            </select>
+                        </div>
+                        <div class="diplom-container">
+                            <div class="input">
+                                <label for="birth">Учреждение образования*</label>
+                                <input type="text" name="nameEduc" id="nameEduc" class="form-control" required>
+                            </div>
+                            <div class=" input">
+                                <label for="facultet">Факультет (полное наименование без сокращений)*</label>
+                                <input type="text" name="nameFacult" id="nameFacult" class="form-control" required>
+                            </div>
+                        
+                            <div class="spesiality input">
+                                <label for="facultet">Специальность по диплому*</label>
+                                <input type="text" name="namespesiality" class="form-control" id="namespesiality" required>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="adress-info">
+                        <div class="live">
+                            <label for="adress">Знание иностранных языков</label>
+                            <input type="text" name="adress" id="adress" class="form-control" required>
+                            
+                        </div>
+                        <div>
+                            <h3 class="additional">Дополнительное профессиональное обучение</h3>
+                            <p>Курсы стажировки/повышения квалификации</p>
+                            <textarea name="courses" id="courses" cols="30" rows="10" class="form-control"></textarea>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <button class="button"  type="submit">Продолжить заполнение</button>
+        </form>
+     
+    </div>
+    <div class="footer">
+        <div class="footer-container ">
+            <div class="footer-item1">
+                <div class="footer-logo">
+
+                    <div class="logo-text">
+                        <img src="img/Vector.svg" alt="logo">
+                        <div class="logo-text-right">
+                            <p class="logo-text-h">БЕЛАРУСЬКАЛИЙ</p>
+                            <p class="logo-text-l">ОТКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО</p>
+                        </div>  
+                    </div>
+
+                    <div class="footer-text-down">
+                        <p class="footer-text-rules text-down">Правила обработки персональных данных</p>
+                        <p class="footer-text-rules">©2022 ОАО «Беларуськалий»</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-item2">
+                <p class="footer-item2-map footer-text-rules">МЫ НАХОДИМСЯ:</p>
+                <p class="footer-item2-adress footer-item2-map">г. Солигорск, ул.Коржа, 5</p>
+            </div>
+            <div class="footer-item3">
+                <p class=" footer-item2-map">ПОДПИСЫВАЙТЕСЬ:</p>
+                <div class="soc">
+                    <a href="#">
+                        <div class="circle">
+                            <img src="img/arcticons_telegram.svg" alt="telegram">
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="circle">
+                            <img src="img/arcticons_vk.svg" alt="vk">
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const select = document.querySelector('#yearsEnd')
+        for (let year = 1920; year <= 2020; year++) {
+            let options = document.createElement("OPTION");
+            select.appendChild(options).innerHTML = year;
+        }
+    </script>
+</body>
+</html>

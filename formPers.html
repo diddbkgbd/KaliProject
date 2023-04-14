@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html">
+            <h3 class="logo">BELARUSKALI</h3>
+        </a>
+        <ul class="menu">
+            <li class="menu-item">
+                <a href="#about">О компании</a>
+            </li>       
+            <li class="menu-item">
+                <a href="#priority">Кадровая политика</a>
+                
+            </li>
+            <li class="menu-item">
+                <a href="#advantages">Преимущества</a>
+            </li>
+            <li class="menu-item">
+                <a href="#jobs">Вакансии</a>
+            </li>
+            <li class="menu-item">
+                <a href="#contact">Контакты</a>
+            </li>
+        </ul>
+        <a class="logoout-line" href="#">
+            <span class="logoout-line-image" ></span>
+            <span class="logoout-line-text">Личный кабинет</span> </a>
+    </div>
+    <div  id="main" class="main">
+        <h1> <span class="h-color">Главная</span> / Анкета</h1>
+        <form onsubmit="document.location='educationalform.html'; return false">
+            <div class="content-input">
+                <div class="link-form">
+                    <div class="step choose">
+                       <div class="step-contain">
+                        <span >
+                            <img src="img/form-icon/clarity_user-line1.svg" alt="shool">
+                        </span>
+                        <p>
+                            <b>Личная информация</b>
+                        </p>
+                       </div>
+                        <div class="line"></div>
+                    </div>
+                    <div class="step">
+                        <div class="step-contain">
+                            <span>
+                                <img src="img/form-icon/clarity_user-line1.svg" alt="shool">
+                            </span>
+                            <p>Образование</p>
+                        </div>
+                        <div class="line"></div>
+                    </div>
+                    <div class="step">
+                        <div class="step-contain">
+                            <span>
+                                <img src="img/form-icon/clarity_user-line1.svg" alt="shool">
+                            </span>
+                        </div>
+                        <p>Опыт работы</p>
+                        <div class="line"></div>
+                    </div>
+                    <div class="step">
+                        <div class="step-contain">
+                            <span>
+                                <img src="img/form-icon/clarity_user-line1.svg" alt="shool">
+                            </span>
+                        </div>
+                        <p>Дополнительная информация</p>
+                    </div>
+                    
+                </div>
+                <div class="content-input-form">
+                    <div class="fio-info">
+                        <div class="surname input">
+                            <label for="surname">Фамилия</label>
+                            <input type="text" name="surname" id="surname" required>
+                        </div>
+                        <div class="name input">
+                            <label for="name">Имя</label>
+                            <input type="text" name="name" id="name" required>
+                        </div>
+                        <div class="otchestvo input">
+                            <label for="otchestvo">Отчество</label>
+                            <input type="text" name="otchestvo" id="otchestvo">
+                        </div>
+                        <div class="birth input">
+                            <label for="birth">Фамилия</label>
+                            <input type="date" name="birth" id="birth" required>
+                        </div>
+                        <div class="family input">
+                            <label for="family">Семейное положение</label>
+                            <select id="family">
+                                <option>разведен</option>
+                                <option>женат</option>
+                            </select>
+                        </div>
+                        <div class="family input">
+                            <label for="gen">Пол</label>
+                            
+                            <div class="cover">
+                                <p> <input class="radio" type="radio" checked="true" name="gen" id="man" required> <span>мужской</span></p>
+                          
+                                <p><input class="radio" type="radio" name="gen" id="woman" required> <span>женский</span></p> 
+                            </div>
+                        </div>
+                        <div class="kids input">
+                            <label for="kids">Есть ли у Вас дети?</label>
+                            <div class="cover">
+                                <p> <input class="radio" type="radio" checked="true" name="kids" id="no" required><span>нет</span></p>
+                            
+                                <p><input class="radio" type="radio" name="kids" id="yes" required> <span>да</span></p> 
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="adress-info">
+                        <div class="live">
+                            <label for="adress">Адрес проживания</label>
+                            <input type="text" name="adress" id="adress" required>
+                            
+                        </div>
+                        <p class="top">
+                            <input type="checkbox" name="lives" id="lives" checked="true" required>
+                            <span>адрес проживания совпадает с адресом регистрации</span>
+                        </p>
+                        <div class="registr">
+                            <label for="registr">Адрес регистрации</label>
+                            <input type="text" name="adress" id="registr" required>
+                        </div>
+                        <div class="contuct-info">
+                            <div class="home-number">
+                                <label for="home-num">Домашний номер</label>
+                                <input type="text" placeholder="80174235689" id="home-num" required>
+                            </div>
+                            <div class="home-number">
+                                <label for="home-num">Мобильный номер</label>
+                                <input type="text" placeholder="+375 (__) ___-__-__" id="home-num" required>
+                            </div>
+                            <div class="home-number">
+                                <label for="home-num">Электронная почта</label>
+                                <input type="email" placeholder="example@gmail.com" id="home-num" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto-inf0">
+                        <div class="image">
+                            <label for="loadFileXml">Фото</label>
+                            <p class="test">Добавьте изображение или перетяните фото сюда</p>
+                            <input type="button" id="loadFileXml" onclick="document.getElementById('file').click();" required/>
+                            <input type="file" style="display:none;" id="file" name="file" required/>
+                            <label for="home-num">Актуальная фотография (не старше 6 месяцев) в деловом стиле</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="button"  type="submit">Далее</button>
+        </form>
+     
+    </div>
+    <div class="footer">
+        <div class="footer-container ">
+            <div class="footer-item1">
+                <div class="footer-logo">
+
+                    <div class="logo-text">
+                        <img src="img/Vector.svg" alt="logo">
+                        <div class="logo-text-right">
+                            <p class="logo-text-h">БЕЛАРУСЬКАЛИЙ</p>
+                            <p class="logo-text-l">ОТКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО</p>
+                        </div>  
+                    </div>
+
+                    <div class="footer-text-down">
+                        <p class="footer-text-rules text-down">Правила обработки персональных данных</p>
+                        <p class="footer-text-rules">©2022 ОАО «Беларуськалий»</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-item2">
+                <p class="footer-item2-map footer-text-rules">МЫ НАХОДИМСЯ:</p>
+                <p class="footer-item2-adress footer-item2-map">г. Солигорск, ул.Коржа, 5</p>
+            </div>
+            <div class="footer-item3">
+                <p class=" footer-item2-map">ПОДПИСЫВАЙТЕСЬ:</p>
+                <div class="soc">
+                    <a href="#">
+                        <div class="circle">
+                            <img src="img/arcticons_telegram.svg" alt="telegram">
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="circle">
+                            <img src="img/arcticons_vk.svg" alt="vk">
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

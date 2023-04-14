@@ -1,0 +1,83 @@
+.diplom-container{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+
+.input{
+    padding: 1px;
+}
+.adress{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(0, 0, 0, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.04);
+
+}
+.adress-info input{
+    width: 94%;
+}
+.additional{
+    
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 150%;
+color: #1F2937;
+text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(0, 0, 0, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.04);
+flex: none;
+align-self: stretch;
+}
+
+#content-input-form {
+    grid-template-rows: auto;
+}
+#courses{
+    resize: none; 
+}
+
+.step-contain .done{
+    background: linear-gradient(90deg, #96DEDA 0%, #50C9C3 100%)
+}
+
+.input-checkbox input{
+    width: 16px;
+    height: 16px;
+}
+
+.fio-info .input-checkbox{
+    display: flex;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.input-checkbox label{
+    position: static;
+}
+
+.job-info{
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.job-info .spesiality{
+    grid-column-start: 1;
+    grid-column-end: 4;
+
+}
+#namefacultet{
+    padding: 8px;
+    height: 121px;
+}
+.dopinfo {
+   padding-top: 25px;
+}
+
+.dopinfo textarea::placeholder{
+    font-size: 12px;
+    color: #919dae;
+    position: absolute;
+
+}

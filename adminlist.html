@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/adminstyle.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <nav>
+        <div class="d-flex  flex-wrap align-items-center" id="logo-text">
+            <a class="d-block" href="login/login.html">
+                <img src="img/icons/adminlogo.svg" alt="logo">
+            </a>
+            <div class="logo-text  text-white">
+                <h3>Беларуськалий</h3>
+                <p>Подбор персонала</p>
+            </div>
+           
+        </div>
+
+        <ul class="list-group" id="nav-list">
+            <li >Аналитика</li>
+            <li>Анкеты</li>
+            <li>Заявки на подбор</li>
+            <li>Вакансии</li>
+            <li>Справочники</li>
+            <li>Настройки</li>
+            <li>Уведомления</li>
+            <li>Собеседования</li>
+            <li>Обратная связь</li>
+            <li>Помощь</li>
+        </ul>
+    </nav>
+
+    <main>
+        <header class="main-header">
+            <div class="row justify-content-between">
+                <h2 class="col-sm-3">Список вакансий</h2>
+                <input type="search" name="search" class="col-sm-3" placeholder="Поиск" id="search">
+                <button class="col-sm-3" id="creat">Создать вакансию</button>
+            </div>
+            <div class="row justify-content-between">
+                <select name="filter-vacansy" id="vacansyFilter" class="col-sm-2">
+                    <option value="all">все вакансии</option>
+                </select>
+                <div class="col-sm-3 " id="settings">
+                    <label for="check" class="col">
+                        <input type="checkbox" name="archive" id="archive"> показать архив
+                    </label>
+                    <button class="col" id="filtButton">фильтр</button>
+                    <button class="squers" class="col">
+                        <img src="img/icons/admin/clarity_grid-view-line.svg" alt=""> </button>
+                    <button class="lines" class="col">
+                        <img src="img/icons/admin/clarity_justify-text-line.svg" alt=""> 
+                    </button>
+                </div>
+            </div>
+        </header>
+        <section>
+            <div class="conteiner">
+                <div class="row heading-list">
+                    <p class="col-sm-1"> №</p>
+                    <p class="col-sm-1">Подразделение</p>
+                    <p class="col-sm-2 ">Деятельность</p>
+                    <p class="col-sm-2 ">Должность</p>
+                    <p class="col-sm-1">Дата создания</p>
+                    <p class="col-sm-1">Активная вакансия</p>
+                    <p class="col-sm-1">Количество кандидатов</p>
+                    <p class="col-sm-1">Операции</p>
+                </div>
+
+                <ul class="list-group" id="main">
+
+                    <!-- v-for="offer in filteredList"  -->
+                    <li class="candidat-item row" id="can-item" v-for="offer in filteredList">
+                    
+                       <!-- <p class="col-sm-1">
+                            
+                       </p> -->
+                        <p class="col-sm-1"><span></span> {{offer.num}}</p>
+                        <p class="col-sm-1">{{offer.division}}</p>
+                        <p class="col-sm-2 ">{{offer.activities}}</p>
+                        <p class="col-sm-2 "> {{offer.post}}</p>
+                        <p class="col-sm-1">{{offer.num}}</p>
+                        <p class="col-sm-1">
+                            <input type="checkbox" name="active" id="activation"   checked="false">
+                        </p>
+                        <p class="col-sm-1">{{offer.col}}</p>
+                        <div class="col-sm-1 d-flex justify-content-between ">
+                            <button>
+                                <img src="img/icons/admin/done.svg" alt="done" class="col">
+                            </button>
+                            <button>
+                                <img src="img/icons/admin/change.svg" alt="done" class="col">
+                            </button>
+                            <button onclick="clearBooks()" >
+                                <img src="img/icons/admin/remove.svg" alt="done" class="col">
+                            </button>
+                        </div>
+                       
+                    </li>
+                </ul>
+
+                <footer class="row justify-content-end" id="foot">
+                    <p class="col-sm-2">Количество на странице:</p>
+                    <p class="col-sm-1">10</p>
+                    <p class="col-sm-1">1-10 из 15</p>
+                </footer>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/idb@3.0.2/build/idb.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

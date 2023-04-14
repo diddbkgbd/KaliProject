@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <div class="container">
+        <div class="well">
+            <form class="form-inline">
+                <h1>
+                    <label for=""> Enter name</label>
+                </h1>
+                <input type="text" name="name" class="form-control" v-model="name">
+            </form>
+        </div>
+        <div class="well">
+            <ul>
+                <li v-for="country in filteredList"  class="list-group-item">
+                    <h1>{{country.name}}</h1>
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, adipisci doloremque?
+                         Exercitationem ullam, officiis totam, eveniet architecto ipsam dolor doloremque fugiat quo quam, possimus unde commodi maxime explicabo error. Eius.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+    <script >
+        var app = new Vue({
+            el:".container",
+            data:{
+                name:'',
+                Countries:[
+                    {name: "America"},
+                    {name: "Armenia "},
+                    {name: "Azerbaijan "},
+                    {name: "CIS "},
+                    {name: "Organization"},
+                    {name: "NATO "},
+                    {name: "SCO "},
+                    {name: "German "},
+                    {name: "Spanish "},
+                    {name: "Spanish "},
+                    {name: "British "},
+                    {name: "Russian "},
+                    {name: "American "},
+                ],
+            },
+            computed:{
+                filteredList: function(){
+                    var comp = this.name;
+                    return this.Countries.filter(function (elem) {
+                    
+                        if(comp=='') return true;
+                        else return elem.name.indexOf(comp) > -1;
+                    })
+                }
+        }
+    })
+
+    </script>
+
+    
+    
+</body>
+</html>
+<!-- true type -->
+
+
+
+<!-- 
+     computed:{
+        filteredList: function(){
+            var comp = this.name;
+            return this.Offers.filter(function (elem) {
+            
+                if(comp=='') return true;
+                else return elem.name.indexOf(comp) > -1;
+            })
+        },
+        computed_items: function () {
+            let filterType= this.SelectedType,
+                filterNum = this.SelectedNum
+            return this.Offfers.filter(function(item){
+              let filtered = true
+              if(filterType && filterType.length > 0){
+                filtered = item.type == filterType
+              }
+              if(filtered){
+                if(filterNum && filterNum.length > 0){
+                  filtered = item.num == filterNum
+                }
+              }
+              return filtered
+            })
+          }
+        
+}
+ -->

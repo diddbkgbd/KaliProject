@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html">
+            <h3 class="logo">BELARUSKALI</h3>
+        </a>
+        <ul class="menu">
+            <li class="menu-item">
+                <a href="#about">О компании</a>
+            </li>       
+            <li class="menu-item">
+                <a href="#priority">Кадровая политика</a>
+                
+            </li>
+            <li class="menu-item">
+                <a href="#advantages">Преимущества</a>
+            </li>
+            <li class="menu-item">
+                <a href="#jobs">Вакансии</a>
+            </li>
+            <li class="menu-item">
+                <a href="#contact">Контакты</a>
+            </li>
+        </ul>
+        <a class="logoout-line" href="#">
+            <span class="logoout-line-image" ></span>
+            <span class="logoout-line-text">Личный кабинет</span> </a>
+    </div>
+    
+    <div id="main">
+        <div class="search">
+            <h1><span class="h-color">Главная</span> / Вакансии</h1>
+
+            <form>
+                <div class="search-input-container">
+                    <input type="text" name="name" class="name-form" v-model="name" placeholder="Введите интересующую Вас профессию " v-model="name">
+                </div>
+                <div class="search-input-container">
+                    <label for="direction">Направление деятельности</label>
+                    <select v-model="SelectedNum" id="direction" class="direction">
+                        <option value="num1">Общество с ограниченной ответственностью "Белкалий-Мигао"</option>
+                        <option value="num2">Мясоперерабатывающий комплекс</option>
+                        <option value="num3">Управление социального развития и жилищно-коммунального хозяйства</option>
+                        <option value="num4">Управление автоматизации</option>
+                        <option value="num5">Рудник четвертого рудоуправления</option>
+                        <option value="num6">Управление</option>
+                        <option value="num7">Кафе "Алеся" управления социального развития и жилищно-коммунального хозяйства</option>
+                        <option value="num8">Цех связи</option>
+                    
+                    </select>
+                </div>
+
+                <div  class="search-input-container">
+                    <label for="division">Подразделение</label>
+                    <select v-model="SelectedType" id="division" class="division">
+                        <option value="type1">Ремонтные работы</option>
+                        <option value="type2">Строительство и жилищно-коммунальное хозяйство</option>
+                        <option value="type3">Общественное питание</option>
+                        <option value="type4">Геология и маркшейдерия</option>
+                        <option value="type5">Охрана и безопасность</option>                
+                    </select>
+    
+                </div>
+            </form>
+        </div>
+        <div class="offers-container">
+            <ul class="offers">
+                <li v-for="offer in filteredList" class="offer-item">
+                    <div class="offer-item-content">
+                        <h3 class="offer-name">{{offer.name}}</h3>
+                        <p class="offer-direction">
+                            <span class="icon">
+                                <img src="img/icons/clarity_building-line.svg" alt="">
+                            </span>
+                            <span class="text">{{offer.direction}}</span>
+
+                        </p>
+                        <p class="offer-division">
+                            <span class="icon">
+                                <img src="img/icons/clarity_router-line.svg" alt="">
+                            </span>
+                            <span class="text">{{offer.division}}</span>
+
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <div class="footer-container ">
+            <div class="footer-item1">
+                <div class="footer-logo">
+
+                    <div class="logo-text">
+                        <img src="img/Vector.svg" alt="logo">
+                        <div class="logo-text-right">
+                            <p class="logo-text-h">БЕЛАРУСЬКАЛИЙ</p>
+                            <p class="logo-text-l">ОТКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО</p>
+                        </div>  
+                    </div>
+
+                    <div class="footer-text-down">
+                        <p class="footer-text-rules text-down">Правила обработки персональных данных</p>
+                        <p class="footer-text-rules">©2022 ОАО «Беларуськалий»</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-item2">
+                <p class="footer-item2-map footer-text-rules">МЫ НАХОДИМСЯ:</p>
+                <p class="footer-item2-adress footer-item2-map">г. Солигорск, ул.Коржа, 5</p>
+            </div>
+            <div class="footer-item3">
+                <p class=" footer-item2-map">ПОДПИСЫВАЙТЕСЬ:</p>
+                <div class="soc">
+                    <a href="#">
+                        <div class="circle">
+                            <img src="img/arcticons_telegram.svg" alt="telegram">
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="circle">
+                            <img src="img/arcticons_vk.svg" alt="vk">
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+</body>
+</html>
