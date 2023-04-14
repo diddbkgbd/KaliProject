@@ -225,3 +225,7 @@ main button{
     align-items: center;
     gap: 5px;
 }
+
+#can-item p{
+    font-size: 13px;
+}
