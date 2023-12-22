@@ -66,7 +66,7 @@ app.controller("myCtrl",function($scope,$http,$window){
              if( $scope.btnName == "Войти" ){
                 data.forEach(e => {
                     if(e.username==$scope.username && e.pass==$scope.password){              
-                        alert("Your account habe been already creatced!")
+                        alert("Ваш аккаунт уже создан!")
                         return
                     }
                     else{
@@ -77,7 +77,7 @@ app.controller("myCtrl",function($scope,$http,$window){
                         data.push(newmember)
                         // console.log(data)
                         localStorage.setItem("login", JSON.stringify(data));
-                        alert ("Login sccessesful!")
+                        alert ("Ваш аккаунт создан, войдите в аккаунт!")
                     }
                 })   
             }

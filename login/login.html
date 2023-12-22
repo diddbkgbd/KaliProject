@@ -26,32 +26,32 @@
                 <div class="indicator"></div>
                 <div class="">
                     <span ng-show="signupform.$submitted || signupform.username.$dirty">
-                        <span class="error" ng-show="signupform.username.$error.required"> <i class="fa fa-exclamation-circle"></i> Username required</span>
+                        <span class="error" ng-show="signupform.username.$error.required"> <i class="fa fa-exclamation-circle"></i> Не заполнено имя</span>
                     </span> <br>
                 </div>
             </div>
             <div class="textfield">
                 <i class="fa fa-key icon"></i>
-                <input type="password" class="textfield-input" name="password" ng-model="password" required>
+                <input type="text" class="textfield-input" name="password" ng-model="password" required>
                 <label for="">Пароль</label>
                 <div class="indicator"></div>
                 <div class="">
                     <span ng-show="signupform.$submitted || signupform.password.$dirty">
-                        <span class="error" ng-show="signupform.password.$error.required"> <i class="fa fa-exclamation-circle"></i> Password required</span>
+                        <span class="error" ng-show="signupform.password.$error.required"> <i class="fa fa-exclamation-circle"></i>Не заполнен пароль</span>
                     </span> <br>
                 </div>
             </div>
             <div class="textfield" ng-show="showsignup">
                 <i class="fa fa-check icon"></i>
-                <input type="password" class="textfield-input" name="cpassword" ng-model="cpassword" required>
+                <input type="text" class="textfield-input" name="cpassword" ng-model="cpassword" required>
                 <label for="">Подтверждение пароля</label>
                 <div class="indicator"></div>
                 <div class="">
                     <span ng-show="signupform.cpassword.$dirty && !(signupform.cpassword.$error.required)">
-                        <span class="error" ng-show="password != cpassword"> <i class="fa fa-exclamation-circle"></i>Your password must match</span>
+                        <span class="error" ng-show="password != cpassword"> <i class="fa fa-exclamation-circle"></i>Пароль должен совпадать</span>
                     </span> 
                     <span ng-show="signupform.$submitted || signupform.cpassword.$dirty">
-                        <span class="error" ng-show="signupform.cpassword.$error.required"> <i class="fa fa-exclamation-circle"></i> Confirm your password required</span>
+                        <span class="error" ng-show="signupform.cpassword.$error.required"> <i class="fa fa-exclamation-circle"></i> Подтвердите свой пароль</span>
                     </span> 
                 </div>
             </div><br>
