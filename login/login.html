@@ -13,17 +13,16 @@
 </head>
 <body ng-app="myApp" ng-controller = "myCtrl">
 
-    <!-- <a href="#">{{btnName}}</a> -->
+   
 
      <div class = box>
-        <!-- <img src="" alt="user.jpg" class = "avatar"> -->
         <form name = "signupform" novalidate autocomplete="off">
-            <h1 ng-show="showlogin">Login</h1>
-            <h1  ng-show="showsignup">Sign up</h1>
+            <h1 ng-show="showlogin">Логин</h1>
+            <h1  ng-show="showsignup">Вход</h1>
             <div class="textfield">
                 <i class="fa fa-user icon"></i>
                 <input type="text" class="textfield-input" name="username" ng-model="username" required>
-                <label for="">Username</label>
+                <label for="">Имя Пользователя</label>
                 <div class="indicator"></div>
                 <div class="">
                     <span ng-show="signupform.$submitted || signupform.username.$dirty">
@@ -33,8 +32,8 @@
             </div>
             <div class="textfield">
                 <i class="fa fa-key icon"></i>
-                <input type="text" class="textfield-input" name="password" ng-model="password" required>
-                <label for="">Password</label>
+                <input type="password" class="textfield-input" name="password" ng-model="password" required>
+                <label for="">Пароль</label>
                 <div class="indicator"></div>
                 <div class="">
                     <span ng-show="signupform.$submitted || signupform.password.$dirty">
@@ -44,8 +43,8 @@
             </div>
             <div class="textfield" ng-show="showsignup">
                 <i class="fa fa-check icon"></i>
-                <input type="text" class="textfield-input" name="cpassword" ng-model="cpassword" required>
-                <label for="">Confirm password</label>
+                <input type="password" class="textfield-input" name="cpassword" ng-model="cpassword" required>
+                <label for="">Подтверждение пароля</label>
                 <div class="indicator"></div>
                 <div class="">
                     <span ng-show="signupform.cpassword.$dirty && !(signupform.cpassword.$error.required)">
@@ -63,8 +62,8 @@
                     <span class="lspan"></span>
                     <span class="lspan"></span>
                 {{btnName}} </button>
-                <p class="account" ng-show="showsignup">Already have an Account? <span> <a ng-click="loginpage()"> Login</a></span></p>
-                <p class="account" ng-show="showlogin">New User? <span> <a ng-click="signuppage()"> Create an account</a></span></p>
+                <p class="account" ng-show="showsignup">У вас уже есть аккаунт? <span> <a ng-click="loginpage()"> Войти</a></span></p>
+                <p class="account" ng-show="showlogin">Новый пользователь? <span> <a ng-click="signuppage()"> Создать аккаунт</a></span></p>
 
             </div>
         </form>
